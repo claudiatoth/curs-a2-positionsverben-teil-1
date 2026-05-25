@@ -366,6 +366,42 @@ body {
     font-size: 0.95rem;
 }
 
+/* Tabele gramatică (verb-konjugation) — padding mai mare, white-space nowrap */
+.grammar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.grammar-table th {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #047857;
+    white-space: nowrap;
+}
+
+.grammar-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ecfdf5;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.grammar-table tr:last-child td {
+    border-bottom: none;
+}
+
+.grammar-table tr:nth-child(even) {
+    background: #f0fdf4;
+}
+
 /* ============================================
    EXERCIȚII
    ============================================ */
