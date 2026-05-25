@@ -9,8 +9,33 @@
     function buildPDF() {
         const root = document.getElementById('pdf-content');
         if (!root) return;
-        // Lecție suplimentară A2 — NU are verbs.js, deci skip buildVerbs.
-        root.innerHTML = buildCast() + buildTheory() + buildExercises() + buildFlashcards();
+        root.innerHTML = buildCast() + buildTheory() + buildExercises() + buildFlashcards() + buildVerbs();
+    }
+
+    function buildVerbs() {
+        if (typeof verbsData === 'undefined' || !verbsData.length) return '';
+        let html = '<h1 class="chapter new-section">🔁 4. Verbe — 5 perechi Wechselverben (Präsens + Präteritum + Perfekt)</h1>' +
+            '<p style="color:#6b7280; font-style:italic; margin-bottom:10px;">Cele 5 perechi de verbe poziție/mișcare: liegen/legen, stehen/stellen, sitzen/setzen, hängen DOUBLET, stecken. PONS-verified.</p>';
+        verbsData.forEach(function (v) {
+            const badge = v.typ.indexOf('tare') === 0 ? '#dc2626' : '#047857';
+            html += '<div class="verb-card"><div class="vh">' +
+                '<span class="name">' + v.inf + '</span>' +
+                '<span class="ro">— ' + v.ro + '</span>' +
+                '<span class="badge" style="background:' + badge + ';">' + v.typ + '</span>' +
+                '<span class="badge ' + v.aux + '">' + v.aux + '</span>' +
+                '</div>';
+            html += '<h5>Präsens</h5><table><thead><tr><th>Pronume</th><th>DE</th><th>RO</th></tr></thead><tbody>';
+            v.praes.forEach(function (x) { html += '<tr><td><strong>' + x[0] + '</strong></td><td class="verb">' + x[1] + '</td><td class="ro-text">' + x[2] + '</td></tr>'; });
+            html += '</tbody></table>';
+            html += '<h5>Präteritum</h5><table><thead><tr><th>Pronume</th><th>DE</th><th>RO</th></tr></thead><tbody>';
+            v.praet.forEach(function (x) { html += '<tr><td><strong>' + x[0] + '</strong></td><td class="verb">' + x[1] + '</td><td class="ro-text">' + x[2] + '</td></tr>'; });
+            html += '</tbody></table>';
+            const ex = v.perf[2] || v.perf[0];
+            html += '<div class="perfekt-box"><strong>Perfekt:</strong> auxiliar <strong>' + v.aux + '</strong> + <strong>' + v.part + '</strong> · <em>ex:</em> <span class="de">' + ex[0] + ' ' + ex[1] + '</span> · <span class="ro">' + ex[2] + '</span></div>';
+            if (v.note) html += '<div class="note">' + v.note + '</div>';
+            html += '</div>';
+        });
+        return html;
     }
 
     function buildCast() {
