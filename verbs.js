@@ -127,7 +127,9 @@ function buildVerbs() {
 function toggleVerb(i) {
     const content = document.getElementById('verb-' + i);
     if (!content) return;
-    content.classList.toggle('open');
+    content.classList.toggle('active');
+    const headers = document.querySelectorAll('#verbs-container .sub-section-header .sub-arrow');
+    if (headers[i]) headers[i].classList.toggle('rotated');
 }
 
 buildVerbs();
