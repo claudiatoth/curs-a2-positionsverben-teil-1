@@ -130,6 +130,4 @@ function toggleVerb(i) {
     content.classList.toggle('open');
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    buildVerbs();
-});
+buildVerbs();
