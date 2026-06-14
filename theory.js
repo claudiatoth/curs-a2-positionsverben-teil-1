@@ -175,7 +175,7 @@ const theoryHTML = `
                 </tbody>
             </table>
 
-            <div class="theory-box" style="background: #fef3c7; border-color: #f59e0b; margin-top: 14px;">
+            <div class="theory-box" style="background: #F5F0E8; border-color: #D4A574; margin-top: 14px;">
                 <h4>⚠️ Atenție: stecken și hängen sunt IDENTICE ca formă!</h4>
                 <p>La <strong>stecken</strong> și <strong>hängen</strong>, verbul se scrie la fel pentru poziție și mișcare. <strong>Diferența o face cazul</strong> (Dativ vs. Akkusativ) + sensul propoziției.</p>
                 <p style="margin-top: 8px;">Exemplu:<br>

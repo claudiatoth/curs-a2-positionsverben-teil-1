@@ -86,7 +86,7 @@ function buildEx2() {
     if (!c) return;
     let html = `<div class="exercise-instruction"><strong>📝 Completează cu articolul potrivit (Dativ sau Akkusativ).</strong><br><em>Reamintire:</em> Wo? (poziție) → Dat: dem/der/dem/den · Wohin? (mișcare) → Akk: den/die/das/die.</div>`;
     ex2Data.forEach((it, i) => {
-        html += `<div class="exercise-item"><span class="exercise-number">${i+1}</span><div class="input-group"><label>${it.sentence} <small style="color:#6b7280;">💡 ${it.hint}</small></label><input type="text" id="ex2-${it.id}" placeholder="articol"></div><div class="feedback" id="ex2-f${it.id}"></div></div>`;
+        html += `<div class="exercise-item"><span class="exercise-number">${i+1}</span><div class="input-group"><label>${it.sentence} <small style="color:#5A5147;">💡 ${it.hint}</small></label><input type="text" id="ex2-${it.id}" placeholder="articol"></div><div class="feedback" id="ex2-f${it.id}"></div></div>`;
     });
     c.innerHTML = html;
 }
@@ -218,7 +218,7 @@ function buildEx5() {
     if (!c) return;
     let html = `<div class="exercise-instruction"><strong>📝 Completează cu prepoziția și articolul potrivit.</strong><br><em>Reamintire:</em> aceeași prepoziție (in, an, auf etc.) ia <strong>Dativ</strong> la Wo? și <strong>Akkusativ</strong> la Wohin?.</div>`;
     ex5Data.forEach((it, i) => {
-        html += `<div class="exercise-item"><span class="exercise-number">${i+1}</span><div class="input-group"><label>${it.sentence} <small style="color:#6b7280;">💡 ${it.hint}</small></label><input type="text" id="ex5-${it.id}" placeholder="prepoziție + articol"></div><div class="feedback" id="ex5-f${it.id}"></div></div>`;
+        html += `<div class="exercise-item"><span class="exercise-number">${i+1}</span><div class="input-group"><label>${it.sentence} <small style="color:#5A5147;">💡 ${it.hint}</small></label><input type="text" id="ex5-${it.id}" placeholder="prepoziție + articol"></div><div class="feedback" id="ex5-f${it.id}"></div></div>`;
     });
     c.innerHTML = html;
 }

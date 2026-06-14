@@ -15,7 +15,7 @@
     function buildVerbs() {
         if (typeof verbsData === 'undefined' || !verbsData.length) return '';
         let html = '<h1 class="chapter new-section">🔁 4. Verbe — 5 perechi Wechselverben (Präsens + Präteritum + Perfekt)</h1>' +
-            '<p style="color:#6b7280; font-style:italic; margin-bottom:10px;">Cele 5 perechi de verbe poziție/mișcare: liegen/legen, stehen/stellen, sitzen/setzen, hängen DOUBLET, stecken. PONS-verified.</p>';
+            '<p style="color:#5A5147; font-style:italic; margin-bottom:10px;">Cele 5 perechi de verbe poziție/mișcare: liegen/legen, stehen/stellen, sitzen/setzen, hängen DOUBLET, stecken. PONS-verified.</p>';
         verbsData.forEach(function (v) {
             const badge = v.typ.indexOf('tare') === 0 ? '#dc2626' : '#047857';
             html += '<div class="verb-card"><div class="vh">' +
@@ -61,8 +61,8 @@
         t = t.replace(/<div class="sub-section">/g, '<div>');
         t = t.replace(/<div class="sub-section-content"[^>]*>/g, '<div>');
         t = t.replace(/<div class="theory-box"\s+style="background:\s*#dbeafe[^"]*"[^>]*>/g, '<div class="theory-box info-box">');
-        t = t.replace(/<div class="theory-box"\s+style="background:\s*#fffbeb[^"]*"[^>]*>/g, '<div class="theory-box warn-box">');
-        t = t.replace(/<div class="theory-box"\s+style="background:\s*#fef3c7[^"]*"[^>]*>/g, '<div class="theory-box warn-box">');
+        t = t.replace(/<div class="theory-box"\s+style="background:\s*#F5F0E8[^"]*"[^>]*>/g, '<div class="theory-box warn-box">');
+        t = t.replace(/<div class="theory-box"\s+style="background:\s*#F5F0E8[^"]*"[^>]*>/g, '<div class="theory-box warn-box">');
         return `<h1 class="chapter">📘 1. Teorie — Wechselverben + Wechselpräpositionen (Wo? Wohin?)</h1>` + t;
     }
 
